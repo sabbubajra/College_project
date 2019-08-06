@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% block body-content %}
+    <div class="jumbotron mb-0" style="font-family: 'Times New Roman';font-size:20px">
+             <h3 class="text-center">Add New Prediction Entry</h3>
+            <hr>
+
+                <form role="form" method="post" enctype="multipart/form-data" style="width:100%;">
+                    <table class="mb-2" border="1" width="100%" cellpadding="20px">
+                     {% csrf_token %}
+
+                        <!--
+                        TODO:
+                        - use select instead of input.
+                        - generate options programmatically
+                        -
+                        -->
+                     <tr>
+                         <td><label>Internet Service:</label></td>
+                         <td><div class="input-group">
+                             <select name="internet_service" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="DSL">DSL</option>
+                                        <option value="Fiber optic">Fiber optic</option>
+                                        <option value="No">No</option>
+
+                         </select></div>
+                         </td>
+
+                     </tr>
+
+                     <tr>
+
+                     <div class="form-group">
+                         <td><label for="tenure">Tenure:</label></td>
+                         <td><div class="input-group">
+                             <input type="text" class="form-control" id="" placeholder="Enter tenure" required="required" name="tenure"/>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                     <tr>
+                     <div class="form-group">
+                         <td><label for="phone">PhoneService:</label></td>
+                         <td><div class="input-group">
+                             <select name="phone_service" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                     <tr>
+                     <div class="form-group">
+                         <td><label>Multiple Lines:</label></td>
+                         <td><div class="input-group">
+                             <select name="multiple_lines" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="No phone service">No phone service</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+
+
+
+
+
+
+                     <tr>
+
+                     <div class="form-group">
+                         <td><label>Contract:</label></td>
+                         <td><div class="input-group">
+                            <select name="contract" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="One year">One year</option>
+                                        <option value="Month-to-month">Month-to-month</option>
+                                        <option value="Two year">Two year</option>
+
+                         </select>
+                         </div></td>
+                    </div>
+                     </tr>
+                      <tr>
+
+                     <div class="form-group">
+                         <td><label>Payment Method:</label></td>
+                         <td><div class="input-group">
+                             <select name="payment" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Bank transfer (automatic)">Bank transfer (automatic)</option>
+                                        <option value="Credit card (automatic)">Credit card (automatic)</option>
+                                        <option value="Electronic check">Electronic check</option>
+                                        <option value="Mailed check">Mailed check</option>
+
+                         </select></div></td>
+                    </div>
+                     </tr>
+
+                     <tr>
+                     <div class="form-group">
+                         <td><label>Online Security</label></td>
+                         <td><div class="input-group">
+                             <select name="online_security" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="No internet service">No internet service</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                      <tr>
+                     <div class="form-group">
+                         <td><label>Online Backup</label></td>
+                         <td><div class="input-group">
+                             <select name="online_backup" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="No internet service">No internet service</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                      <tr>
+                     <div class="form-group">
+                         <td><label>Streaming TV</label></td>
+                         <td><div class="input-group">
+                             <select name="stream_tv" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="No internet service">No internet service</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                       <tr>
+                     <div class="form-group">
+                         <td><label>Streaming Movies</label></td>
+                         <td><div class="input-group">
+                             <select name="stream_mov" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="No internet service">No internet service</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                       <tr>
+                     <div class="form-group">
+                         <td><label>Tech Support</label></td>
+                         <td><div class="input-group">
+                             <select name="tech_support" class="form-control" required="required">
+                                        <option value="Select" selected="">----------------Select----------------</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+
+                                </select>
+                         </div></td>
+                    </div>
+                     </tr>
+
+                    </table>
+                     <input class="btn btn-primary" type="submit" value="Predict">
+
+                 </form>
+
+    </div>
+
+
+    {% endblock %}
